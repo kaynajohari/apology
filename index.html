@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Operation: Make My Boyfriend Stop Being Mad">
+  <title>Operation: Make My Boyfriend Stop Being Mad 💌</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <section class="screen active" id="home">
+      <div class="hero">
+        <span class="eyebrow">🚨 classified relationship mission</span>
+        <h1>Operation: Make My Boyfriend Stop Being Mad 💌</h1>
+        <p>Your girlfriend has made a terrible mistake. Unfortunately, only one person can save this relationship.</p>
+        <div class="status-card">
+          <div><span>BOYFRIEND STATUS</span><b class="red">😡 VERY MAD™</b></div>
+          <div><span>LOVE LEVEL</span><b class="pink">❤️ STILL EXTREMELY HIGH</b></div>
+          <div><span>GIRLFRIEND REGRET</span><b>📈 CONCERNING</b></div>
+        </div>
+        <button class="primary" id="start">START OPERATION →</button>
+      </div>
+    </section>
+
+    <section class="screen" id="quiz">
+      <header class="section-head">
+        <span class="eyebrow">LEVEL 1 · INTERROGATION</span>
+        <h2>Prove You Know Us 💭</h2>
+        <p>Before proceeding, you must prove that you are, in fact, my boyfriend.</p>
+      </header>
+      <div class="card">
+        <div class="progress"><span id="qProgress"></span></div>
+        <h3 id="question"></h3>
+        <div id="answers" class="answers"></div>
+        <p id="feedback" class="feedback" aria-live="polite"></p>
+        <div class="quiz-footer">
+          <span id="qCount" class="tiny"></span>
+          <button class="primary" id="lock" disabled>LOCK ANSWER</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="flags">
+      <header class="section-head">
+        <span class="eyebrow">LEVEL 2 · SURVIVAL</span>
+        <h2>Dodge The Red Flags 🚩</h2>
+        <p>Use ← → or the buttons. Survive for 15 seconds. Yes, this is unfortunately based on real events.</p>
+      </header>
+      <div class="game-wrap">
+        <div class="game-info"><span>🚩 DODGED: <b id="score">0</b></span><span>⏱️ <b id="timer">15</b>s</span></div>
+        <div class="arena" id="arena"><div class="player" id="player">💗</div></div>
+        <div class="touches">
+          <button class="secondary" id="left">←</button>
+          <button class="secondary" id="right">→</button>
+        </div>
+        <button class="primary centered" id="startGame">START THE CHAOS</button>
+        <p id="gameMessage" class="feedback centered-text"></p>
+      </div>
+    </section>
+
+    <section class="screen" id="evidence">
+      <header class="section-head">
+        <span class="eyebrow">LEVEL 3 · EVIDENCE ROOM</span>
+        <h2>The Prosecution Has Entered Evidence 📸</h2>
+        <p>Click every piece of evidence. Unfortunately, it's all proof that I really like you.</p>
+      </header>
+      <div class="card">
+        <div class="memory-grid" id="memories"></div>
+        <p class="evidence-count" id="evidenceCount">EVIDENCE REVIEWED: 0 / 5</p>
+        <button class="primary centered" id="verdict" disabled>VERDICT →</button>
+      </div>
+    </section>
+
+    <section class="screen" id="security">
+      <header class="section-head">
+        <span class="eyebrow">FINAL SECURITY CHECK</span>
+        <h2>Unlock The Classified Apology 🔐</h2>
+        <p>Only one question stands between you and the highly confidential girlfriend statement.</p>
+      </header>
+      <div class="card security">
+        <div class="lock-icon">🔐</div>
+        <h3>Does your girlfriend love you?</h3>
+        <div id="finalAnswers" class="answers">
+          <button class="answer">❌ No</button>
+          <button class="answer">❌ Definitely not</button>
+          <button class="answer">❌ She is probably plotting something</button>
+          <button class="answer" data-correct="true">✅ Unfortunately, yes. A LOT.</button>
+        </div>
+        <p id="finalFeedback" class="feedback"></p>
+      </div>
+    </section>
+
+    <section class="screen final-screen" id="apology">
+      <div class="celebrate">💌🥺❤️</div>
+      <span class="eyebrow">ACCESS GRANTED</span>
+      <h2>Classified Apology Unlocked</h2>
+      <p>Okay. No more jokes for a second.</p>
+
+      <div class="video-box" id="videoBox">
+        <video id="apologyVideo" controls playsinline preload="metadata">
+          <source src="assets/apology.mp4" type="video/mp4">
+        </video>
+        <div class="video-placeholder" id="videoPlaceholder">
+          <strong>🎥 YOUR APOLOGY VIDEO GOES HERE</strong>
+          <span>Replace <code>assets/apology.mp4</code> with your video.</span>
+        </div>
+      </div>
+
+      <div class="love-note" id="loveNote"></div>
+
+      <div class="stats">
+        <div><small>LOVE</small><strong>100% ❤️</strong></div>
+        <div><small>BOYFRIEND ANGER</small><strong>hopefully ↓</strong></div>
+        <div><small>GIRLFRIEND REGRET</small><strong>EXTREME</strong></div>
+      </div>
+
+      <button class="primary" id="forgive">FORGIVE ME? 🥺</button>
+      <p id="ending" class="feedback"></p>
+    </section>
+  </main>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="close" id="closeModal" aria-label="Close">×</button>
+      <img id="modalImage" alt="">
+      <div id="modalFallback" class="modal-fallback"></div>
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <div id="confetti" class="confetti" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
